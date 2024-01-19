@@ -1,6 +1,10 @@
 import React from 'react';
 
 class AddContact extends React.Component {
+     state = { 
+        name: " ",
+        email: " ",
+     }
     render(){
         return(
             <div className = "ui main">
@@ -9,12 +13,20 @@ class AddContact extends React.Component {
             <form className = "ui form ">
                 <div className = "field">
                     <label>Name</label>
-                    <input type = "text" Name = "name" placeholder ="name" />
+                    <input type = "text" 
+                           Name = "name" 
+                           placeholder ="name" 
+                           value = {this.state.name}
+                           onChange={e => this.setState({ name: e.target.value })} />
                 </div>
 
                 <div className = "field">
                     <label>Email</label>
-                    <input type = "text" Name = "Email" placeholder ="Email" />
+                    <input type = "text" 
+                           Name = "Email"
+                           placeholder ="Email"
+                           value = {this.state.email} 
+                           onChange={e=>this.setState({email:e.target.value}) }/>
                 </div>
                 <button className = "ui button blue"> Add</button>
 

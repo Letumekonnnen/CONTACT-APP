@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
 
 function App() {
+  const [Contacts, setContacts] = useState([]);
 
   
   return (
