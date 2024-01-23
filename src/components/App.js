@@ -5,13 +5,16 @@ import ContactList from './ContactList';
 
 function App() {
   const [Contacts, setContacts] = useState([]);
+   const addContactHandler = (Contact){
+    console.log (Contact);
+   }
 
   
   return (
     
     <div className = "ui container">
       <Header />
-      <AddContact />
+      <AddContact addContactHandler ={addContactHandler}/>
       <ContactList Contacts ={Contacts} />
     
     </div>
