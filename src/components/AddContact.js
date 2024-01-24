@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class AddContact extends React.Component {
      state = { 
         name: " ",
@@ -11,8 +12,8 @@ class AddContact extends React.Component {
             alert('all fields are required');
             return;
         }
-        console.log(this.state)
-
+        this.props.addContactHandler(this.state)
+        console.log (this.state);
      }
       
     render(){
