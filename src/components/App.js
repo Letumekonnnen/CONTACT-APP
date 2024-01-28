@@ -7,6 +7,7 @@ function App() {
   const [Contacts, setContacts] = useState([]);
    const addContactHandler = (Contact)=>{
     console.log (Contact);
+    setContacts([...Contacts,  Contact ]);
    }
 
   
